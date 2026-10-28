@@ -82,17 +82,25 @@ jobs:
           gh release create "$GITHUB_REF_NAME" ./packages/radivum-oss.*.nupkg ./packages/SHA256SUMS \
             --title "$GITHUB_REF_NAME" --generate-notes --verify-tag $flags
 
-      # The published bytes are smoke-tested after the fact, because nuget.org indexes asynchronously.
+      # nuget.org validates a new package before listing it and its search and registration indexes follow later; the
+      # first release took about ten minutes to appear and longer to resolve. The push has already succeeded here, so
+      # this step only has to outwait that and then prove the published bytes run.
       - name: Install from nuget.org and run the sample
         run: |
           set -eu
           version="${GITHUB_REF_NAME#v}"
-          for attempt in 1 2 3 4 5 6; do
+          installed=false
+          for attempt in $(seq 1 60); do
             if dotnet tool install radivum-oss --tool-path ./tool --version "$version"; then
+              installed=true
               break
             fi
-            echo "attempt $attempt: the package is not indexed yet"
-            sleep 20
+            echo "attempt $attempt of 60: not available on nuget.org yet"
+            sleep 30
           done
+          if [ "$installed" != "true" ]; then
+            echo "::error::radivum-oss $version was pushed but is not installable from nuget.org after 30 minutes; check its validation status on nuget.org."
+            exit 1
+          fi
           ./tool/radivum-oss report --snapshot samples/network-snapshot.sample.v1.json --out ./sample-output
           test -f ./sample-output/network-report.md
