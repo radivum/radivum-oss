@@ -16,8 +16,10 @@ on:
       - 'v*'
 
 permissions:
-  contents: write
-  id-token: write
+  contents: write # create the GitHub Release
+  deployments: write # the nuget-release environment creates a deployment object
+  attestations: write # attest-build-provenance
+  id-token: write # NuGet/login and the attestation exchange an OIDC token
 
 jobs:
   release:
