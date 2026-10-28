@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <AssemblyName>Radivum.Graph</AssemblyName>
+    <PackageId>Radivum.Graph</PackageId>
+    <Description>Graph generation, serialization, and artifact writing for Radivum.</Description>
+    <PackageTags>azure;networking;graph;topology;serialization</PackageTags>
+    <IsPackable>true</IsPackable>
+    <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Radivum.Model\Radivum.Model.csproj" />
+    <ProjectReference Include="..\Radivum.Oss.Reporting\Radivum.Oss.Reporting.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" />
+  </ItemGroup>
+
+</Project>

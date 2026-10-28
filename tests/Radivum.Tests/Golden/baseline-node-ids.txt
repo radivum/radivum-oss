@@ -1,0 +1,5 @@
+/subscriptions/sub-1/resourcegroups/rg/providers/microsoft.network/virtualnetworks/vnet-1
+/subscriptions/sub-1/resourcegroups/rg/providers/microsoft.network/virtualnetworks/vnet-1/subnets/app
+synthetic:resourcegroup:sub-1/rg
+synthetic:scope:/subscriptions/sub-1
+synthetic:subscription:sub-1

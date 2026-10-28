@@ -1,0 +1,89 @@
+{
+  "analysisId": "sha256-235a3e5031c17485566c6635c74b08f276ab6ea90ef46565c90db6af1d3b0a25",
+  "schemaVersion": "0.1",
+  "toolVersion": "0.1.0",
+  "edition": "pro",
+  "generatedAt": "2026-09-10T00:00:00+00:00",
+  "metadata": {
+    "scopeDescription": "/subscriptions/sub-1",
+    "subscriptionId": "sub-1",
+    "collectedAt": "2026-09-08T10:00:00+00:00",
+    "sourceKind": "pro-cli"
+  },
+  "artifacts": [
+    {
+      "role": "network-snapshot.json",
+      "relativePath": "network-snapshot.json",
+      "sha256": "17007a0a26eea1e6b1a8ccb5e40376abd270dbf3fcf2737ab7c9974fd49ae801",
+      "byteLength": 2725
+    },
+    {
+      "role": "network-graph.json",
+      "relativePath": "network-graph.json",
+      "sha256": "ed9679328d4632f114befcfc48b2adf8fd08ccd59ef157e75c6507e31e37bf22",
+      "byteLength": 5642
+    },
+    {
+      "role": "findings.json",
+      "relativePath": "findings.json",
+      "sha256": "7c51331eb31b59623953f541affea833215ca1a786e59df1ef9d7191b5f11eff",
+      "byteLength": 936
+    },
+    {
+      "role": "routing-evidence.json",
+      "relativePath": "routing-evidence.json",
+      "sha256": "e0283b31d014da6e218c3ad8e15aa098e7267578b3b2565e76b2f54889675bb8",
+      "byteLength": 119
+    },
+    {
+      "role": "trace-results.json",
+      "relativePath": "trace-results.json",
+      "sha256": "d2e3e90d391e099136a7b47081142beebee070e59b4e0f507ccb0d5258cd45d1",
+      "byteLength": 100
+    }
+  ],
+  "capabilities": [
+    {
+      "id": "overview",
+      "status": "available",
+      "detail": null
+    },
+    {
+      "id": "inventory",
+      "status": "available",
+      "detail": "collection coverage 100%"
+    },
+    {
+      "id": "topology",
+      "status": "available",
+      "detail": null
+    },
+    {
+      "id": "findings",
+      "status": "available",
+      "detail": null
+    },
+    {
+      "id": "routing",
+      "status": "available",
+      "detail": null
+    },
+    {
+      "id": "security",
+      "status": "unavailable",
+      "detail": "missing security-evidence.json"
+    },
+    {
+      "id": "trace",
+      "status": "available",
+      "detail": null
+    }
+  ],
+  "coverage": {
+    "overallCompleteness": 1,
+    "status": "available",
+    "unavailableSourceCount": 0,
+    "snapshotResourceCount": 1,
+    "effectiveEvidenceCount": 0
+  }
+}

@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <AssemblyName>Radivum.Oss.Reporting</AssemblyName>
+    <PackageId>Radivum.Oss.Reporting</PackageId>
+    <Description>Report, diagram, and artifact writing services for Radivum.</Description>
+    <PackageTags>azure;networking;reporting;markdown;diagram;artifacts</PackageTags>
+    <IsPackable>true</IsPackable>
+    <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Radivum.Model\Radivum.Model.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" />
+  </ItemGroup>
+
+</Project>

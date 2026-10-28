@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <AssemblyName>Radivum.Oss.Commands</AssemblyName>
+    <PackageId>Radivum.Oss.Commands</PackageId>
+    <Description>Shared collection orchestration and command surface for Radivum hosts.</Description>
+    <PackageTags>azure;networking;collection;commands;cli</PackageTags>
+    <IsPackable>true</IsPackable>
+    <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Radivum.Model\Radivum.Model.csproj" />
+    <ProjectReference Include="..\Radivum.Azure\Radivum.Azure.csproj" />
+    <ProjectReference Include="..\Radivum.Oss.Analysis\Radivum.Oss.Analysis.csproj" />
+    <ProjectReference Include="..\Radivum.Graph\Radivum.Graph.csproj" />
+    <ProjectReference Include="..\Radivum.Oss.Reporting\Radivum.Oss.Reporting.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Azure.Identity" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" />
+  </ItemGroup>
+
+</Project>

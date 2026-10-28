@@ -1,0 +1,71 @@
+{
+  "analysisId": "sha256-235a3e5031c17485566c6635c74b08f276ab6ea90ef46565c90db6af1d3b0a25",
+  "schemaVersion": "0.1",
+  "toolVersion": "0.1.0",
+  "edition": "oss",
+  "generatedAt": "2026-09-10T00:00:00+00:00",
+  "metadata": {
+    "scopeDescription": "/subscriptions/sub-1",
+    "subscriptionId": "sub-1",
+    "collectedAt": "2026-09-08T10:00:00+00:00",
+    "sourceKind": "oss-collection"
+  },
+  "artifacts": [
+    {
+      "role": "network-snapshot.json",
+      "relativePath": "network-snapshot.json",
+      "sha256": "86f754846250ce0044304f1392c4fa9a04872f748f76ceae7258167672a92b8f",
+      "byteLength": 2486
+    },
+    {
+      "role": "findings.json",
+      "relativePath": "findings.json",
+      "sha256": "b70c04611ea86bbe48975e89a7aa9059521f75191d66adf3ca57cea2754238b5",
+      "byteLength": 471
+    }
+  ],
+  "capabilities": [
+    {
+      "id": "overview",
+      "status": "available",
+      "detail": null
+    },
+    {
+      "id": "inventory",
+      "status": "available",
+      "detail": "collection coverage 100%"
+    },
+    {
+      "id": "topology",
+      "status": "unavailable",
+      "detail": "missing network-graph.json"
+    },
+    {
+      "id": "findings",
+      "status": "limited",
+      "detail": "findings produced by oss only"
+    },
+    {
+      "id": "routing",
+      "status": "unavailable",
+      "detail": "requires the pro edition"
+    },
+    {
+      "id": "security",
+      "status": "unavailable",
+      "detail": "requires the pro edition"
+    },
+    {
+      "id": "trace",
+      "status": "unavailable",
+      "detail": "missing trace-results.json"
+    }
+  ],
+  "coverage": {
+    "overallCompleteness": 1,
+    "status": "available",
+    "unavailableSourceCount": 0,
+    "snapshotResourceCount": 1,
+    "effectiveEvidenceCount": 0
+  }
+}

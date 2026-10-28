@@ -1,0 +1,37 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <IsPackable>false</IsPackable>
+    <IsTestProject>true</IsTestProject>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\Radivum.Model\Radivum.Model.csproj" />
+    <ProjectReference Include="..\..\src\Radivum.Azure\Radivum.Azure.csproj" />
+    <ProjectReference Include="..\..\src\Radivum.Oss.Analysis\Radivum.Oss.Analysis.csproj" />
+    <ProjectReference Include="..\..\src\Radivum.Graph\Radivum.Graph.csproj" />
+    <ProjectReference Include="..\..\src\Radivum.Oss.Reporting\Radivum.Oss.Reporting.csproj" />
+    <ProjectReference Include="..\..\src\Radivum.Oss.Commands\Radivum.Oss.Commands.csproj" />
+    <ProjectReference Include="..\..\src\Radivum.Oss.Cli\Radivum.Oss.Cli.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" />
+    <PackageReference Include="xunit" />
+    <PackageReference Include="xunit.runner.visualstudio" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Golden\**\*">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+  <!-- The sample a consumer starts from, copied beside the test so no test has to know a repository path. -->
+  <ItemGroup>
+    <None Include="..\..\samples\network-graph.sample.v1.json" Link="samples\network-graph.sample.v1.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>

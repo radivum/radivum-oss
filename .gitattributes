@@ -1,0 +1,8 @@
+# Line endings are stated rather than inherited, because the golden files the tests compare are text and
+# CI runs on three operating systems.
+* text=auto eol=lf
+
+*.png binary
+*.ico binary
+*.snupkg binary
+*.zip binary

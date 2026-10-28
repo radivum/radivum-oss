@@ -1,0 +1,680 @@
+{
+  "schemaVersion": "0.1",
+  "toolVersion": "0.1.0.0",
+  "tenantId": "00000000-0000-0000-0000-000000000000",
+  "subscriptionIds": [
+    "00000000-0000-0000-0000-000000000000"
+  ],
+  "accountContext": {
+    "accountId": null,
+    "accountName": null,
+    "environmentName": "AzureCloud",
+    "credentialSource": "DefaultAzureCredential"
+  },
+  "collectedAt": "2026-09-25T10:12:06.9943814+00:00",
+  "scope": {
+    "scopeDescription": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/RG_SC_4_test",
+    "subscriptionId": "00000000-0000-0000-0000-000000000000",
+    "resourceGroup": "RG_SC_4_test",
+    "subscriptionIds": [
+      "00000000-0000-0000-0000-000000000000"
+    ]
+  },
+  "resources": {
+    "vNets": [
+      {
+        "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/RG_SC_4_test/providers/Microsoft.Network/virtualNetworks/aznw-s4-hub-spoke-peering-hub-vnet",
+        "name": "aznw-s4-hub-spoke-peering-hub-vnet",
+        "resourceGroup": "rg_sc_4_test",
+        "location": "eastus",
+        "addressSpace": [
+          "10.40.0.0/16"
+        ],
+        "subnets": [
+          {
+            "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/RG_SC_4_test/providers/Microsoft.Network/virtualNetworks/aznw-s4-hub-spoke-peering-hub-vnet/subnets/inspection",
+            "name": "inspection",
+            "addressPrefix": "10.40.0.0/24",
+            "networkSecurityGroupId": null,
+            "routeTableId": null,
+            "metadata": {
+              "itemType": "Resources",
+              "source": "AzureResourceGraph",
+              "timestamp": "2026-09-25T10:12:06.9943814+00:00",
+              "permission": "Reader",
+              "status": "Available",
+              "completeness": 1,
+              "errors": []
+            }
+          },
+          {
+            "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/RG_SC_4_test/providers/Microsoft.Network/virtualNetworks/aznw-s4-hub-spoke-peering-hub-vnet/subnets/shared",
+            "name": "shared",
+            "addressPrefix": "10.40.1.0/24",
+            "networkSecurityGroupId": null,
+            "routeTableId": null,
+            "metadata": {
+              "itemType": "Resources",
+              "source": "AzureResourceGraph",
+              "timestamp": "2026-09-25T10:12:06.9943814+00:00",
+              "permission": "Reader",
+              "status": "Available",
+              "completeness": 1,
+              "errors": []
+            }
+          }
+        ],
+        "peerings": [
+          {
+            "name": "hub-to-spoke1",
+            "remoteVirtualNetworkId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/RG_SC_4_test/providers/Microsoft.Network/virtualNetworks/aznw-s4-hub-spoke-peering-spoke1-vnet",
+            "peeringState": "Connected",
+            "allowGatewayTransit": false,
+            "useRemoteGateways": false,
+            "allowVirtualNetworkAccess": true,
+            "allowForwardedTraffic": true,
+            "metadata": {
+              "itemType": "Resources",
+              "source": "AzureResourceGraph",
+              "timestamp": "2026-09-25T10:12:06.9943814+00:00",
+              "permission": "Reader",
+              "status": "Available",
+              "completeness": 1,
+              "errors": []
+            }
+          },
+          {
+            "name": "hub-to-spoke2",
+            "remoteVirtualNetworkId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/RG_SC_4_test/providers/Microsoft.Network/virtualNetworks/aznw-s4-hub-spoke-peering-spoke2-vnet",
+            "peeringState": "Connected",
+            "allowGatewayTransit": false,
+            "useRemoteGateways": false,
+            "allowVirtualNetworkAccess": true,
+            "allowForwardedTraffic": true,
+            "metadata": {
+              "itemType": "Resources",
+              "source": "AzureResourceGraph",
+              "timestamp": "2026-09-25T10:12:06.9943814+00:00",
+              "permission": "Reader",
+              "status": "Available",
+              "completeness": 1,
+              "errors": []
+            }
+          }
+        ],
+        "metadata": {
+          "itemType": "Resources",
+          "source": "AzureResourceGraph",
+          "timestamp": "2026-09-25T10:12:06.9943814+00:00",
+          "permission": "Reader",
+          "status": "Available",
+          "completeness": 1,
+          "errors": []
+        }
+      },
+      {
+        "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/RG_SC_4_test/providers/Microsoft.Network/virtualNetworks/aznw-s4-hub-spoke-peering-spoke1-vnet",
+        "name": "aznw-s4-hub-spoke-peering-spoke1-vnet",
+        "resourceGroup": "rg_sc_4_test",
+        "location": "eastus",
+        "addressSpace": [
+          "10.41.0.0/16"
+        ],
+        "subnets": [
+          {
+            "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/RG_SC_4_test/providers/Microsoft.Network/virtualNetworks/aznw-s4-hub-spoke-peering-spoke1-vnet/subnets/workload",
+            "name": "workload",
+            "addressPrefix": "10.41.1.0/24",
+            "networkSecurityGroupId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/RG_SC_4_test/providers/Microsoft.Network/networkSecurityGroups/aznw-s4-hub-spoke-peering-nsg-spoke1",
+            "routeTableId": null,
+            "metadata": {
+              "itemType": "Resources",
+              "source": "AzureResourceGraph",
+              "timestamp": "2026-09-25T10:12:06.9943814+00:00",
+              "permission": "Reader",
+              "status": "Available",
+              "completeness": 1,
+              "errors": []
+            }
+          }
+        ],
+        "peerings": [
+          {
+            "name": "spoke1-to-hub",
+            "remoteVirtualNetworkId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/RG_SC_4_test/providers/Microsoft.Network/virtualNetworks/aznw-s4-hub-spoke-peering-hub-vnet",
+            "peeringState": "Connected",
+            "allowGatewayTransit": false,
+            "useRemoteGateways": false,
+            "allowVirtualNetworkAccess": true,
+            "allowForwardedTraffic": true,
+            "metadata": {
+              "itemType": "Resources",
+              "source": "AzureResourceGraph",
+              "timestamp": "2026-09-25T10:12:06.9943814+00:00",
+              "permission": "Reader",
+              "status": "Available",
+              "completeness": 1,
+              "errors": []
+            }
+          }
+        ],
+        "metadata": {
+          "itemType": "Resources",
+          "source": "AzureResourceGraph",
+          "timestamp": "2026-09-25T10:12:06.9943814+00:00",
+          "permission": "Reader",
+          "status": "Available",
+          "completeness": 1,
+          "errors": []
+        }
+      },
+      {
+        "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/RG_SC_4_test/providers/Microsoft.Network/virtualNetworks/aznw-s4-hub-spoke-peering-spoke2-vnet",
+        "name": "aznw-s4-hub-spoke-peering-spoke2-vnet",
+        "resourceGroup": "rg_sc_4_test",
+        "location": "eastus",
+        "addressSpace": [
+          "10.42.0.0/16"
+        ],
+        "subnets": [
+          {
+            "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/RG_SC_4_test/providers/Microsoft.Network/virtualNetworks/aznw-s4-hub-spoke-peering-spoke2-vnet/subnets/workload",
+            "name": "workload",
+            "addressPrefix": "10.42.1.0/24",
+            "networkSecurityGroupId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/RG_SC_4_test/providers/Microsoft.Network/networkSecurityGroups/aznw-s4-hub-spoke-peering-nsg-spoke2",
+            "routeTableId": null,
+            "metadata": {
+              "itemType": "Resources",
+              "source": "AzureResourceGraph",
+              "timestamp": "2026-09-25T10:12:06.9943814+00:00",
+              "permission": "Reader",
+              "status": "Available",
+              "completeness": 1,
+              "errors": []
+            }
+          }
+        ],
+        "peerings": [
+          {
+            "name": "spoke2-to-hub",
+            "remoteVirtualNetworkId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/RG_SC_4_test/providers/Microsoft.Network/virtualNetworks/aznw-s4-hub-spoke-peering-hub-vnet",
+            "peeringState": "Connected",
+            "allowGatewayTransit": false,
+            "useRemoteGateways": false,
+            "allowVirtualNetworkAccess": true,
+            "allowForwardedTraffic": true,
+            "metadata": {
+              "itemType": "Resources",
+              "source": "AzureResourceGraph",
+              "timestamp": "2026-09-25T10:12:06.9943814+00:00",
+              "permission": "Reader",
+              "status": "Available",
+              "completeness": 1,
+              "errors": []
+            }
+          }
+        ],
+        "metadata": {
+          "itemType": "Resources",
+          "source": "AzureResourceGraph",
+          "timestamp": "2026-09-25T10:12:06.9943814+00:00",
+          "permission": "Reader",
+          "status": "Available",
+          "completeness": 1,
+          "errors": []
+        }
+      }
+    ],
+    "networkSecurityGroups": [
+      {
+        "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/RG_SC_4_test/providers/Microsoft.Network/networkSecurityGroups/aznw-s4-hub-spoke-peering-nsg-spoke1",
+        "name": "aznw-s4-hub-spoke-peering-nsg-spoke1",
+        "resourceGroup": "rg_sc_4_test",
+        "location": "eastus",
+        "rules": [
+          {
+            "name": "deny-from-spoke2",
+            "direction": "Inbound",
+            "access": "Deny",
+            "priority": 200,
+            "protocol": "*",
+            "source": "10.42.0.0/16",
+            "destination": "*",
+            "sourcePort": "*",
+            "destinationPort": "*",
+            "metadata": {
+              "itemType": "Resources",
+              "source": "AzureResourceGraph",
+              "timestamp": "2026-09-25T10:12:06.9943814+00:00",
+              "permission": "Reader",
+              "status": "Available",
+              "completeness": 1,
+              "errors": []
+            }
+          }
+        ],
+        "subnetIds": [
+          "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/RG_SC_4_TEST/providers/Microsoft.Network/virtualNetworks/AZNW-S4-HUB-SPOKE-PEERING-SPOKE1-VNET/subnets/WORKLOAD"
+        ],
+        "networkInterfaceIds": [],
+        "metadata": {
+          "itemType": "Resources",
+          "source": "AzureResourceGraph",
+          "timestamp": "2026-09-25T10:12:06.9943814+00:00",
+          "permission": "Reader",
+          "status": "Available",
+          "completeness": 1,
+          "errors": []
+        }
+      },
+      {
+        "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/RG_SC_4_test/providers/Microsoft.Network/networkSecurityGroups/aznw-s4-hub-spoke-peering-nsg-spoke2",
+        "name": "aznw-s4-hub-spoke-peering-nsg-spoke2",
+        "resourceGroup": "rg_sc_4_test",
+        "location": "eastus",
+        "rules": [
+          {
+            "name": "deny-from-spoke1",
+            "direction": "Inbound",
+            "access": "Deny",
+            "priority": 200,
+            "protocol": "*",
+            "source": "10.41.0.0/16",
+            "destination": "*",
+            "sourcePort": "*",
+            "destinationPort": "*",
+            "metadata": {
+              "itemType": "Resources",
+              "source": "AzureResourceGraph",
+              "timestamp": "2026-09-25T10:12:06.9943814+00:00",
+              "permission": "Reader",
+              "status": "Available",
+              "completeness": 1,
+              "errors": []
+            }
+          }
+        ],
+        "subnetIds": [
+          "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/RG_SC_4_TEST/providers/Microsoft.Network/virtualNetworks/AZNW-S4-HUB-SPOKE-PEERING-SPOKE2-VNET/subnets/WORKLOAD"
+        ],
+        "networkInterfaceIds": [],
+        "metadata": {
+          "itemType": "Resources",
+          "source": "AzureResourceGraph",
+          "timestamp": "2026-09-25T10:12:06.9943814+00:00",
+          "permission": "Reader",
+          "status": "Available",
+          "completeness": 1,
+          "errors": []
+        }
+      }
+    ],
+    "routeTables": [],
+    "networkInterfaces": [],
+    "publicIpAddresses": [],
+    "privateEndpoints": [],
+    "privateDnsZones": [],
+    "azureFirewalls": [],
+    "virtualHubs": [],
+    "virtualWans": [],
+    "expressRouteCircuits": [],
+    "virtualNetworkGateways": []
+  },
+  "effectiveEvidence": {
+    "effectiveRoutes": [],
+    "effectiveNetworkSecurityGroups": [],
+    "nextHopResults": []
+  },
+  "relationships": [
+    {
+      "relationshipType": "Contains",
+      "sourceResourceId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/RG_SC_4_test/providers/Microsoft.Network/virtualNetworks/aznw-s4-hub-spoke-peering-hub-vnet",
+      "targetResourceId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/RG_SC_4_test/providers/Microsoft.Network/virtualNetworks/aznw-s4-hub-spoke-peering-hub-vnet/subnets/inspection",
+      "description": "VNet contains subnet",
+      "metadata": {
+        "itemType": "Resources",
+        "source": "AzureResourceGraph",
+        "timestamp": "2026-09-25T10:12:06.9943814+00:00",
+        "permission": "Reader",
+        "status": "Available",
+        "completeness": 1,
+        "errors": []
+      }
+    },
+    {
+      "relationshipType": "Contains",
+      "sourceResourceId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/RG_SC_4_test/providers/Microsoft.Network/virtualNetworks/aznw-s4-hub-spoke-peering-hub-vnet",
+      "targetResourceId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/RG_SC_4_test/providers/Microsoft.Network/virtualNetworks/aznw-s4-hub-spoke-peering-hub-vnet/subnets/shared",
+      "description": "VNet contains subnet",
+      "metadata": {
+        "itemType": "Resources",
+        "source": "AzureResourceGraph",
+        "timestamp": "2026-09-25T10:12:06.9943814+00:00",
+        "permission": "Reader",
+        "status": "Available",
+        "completeness": 1,
+        "errors": []
+      }
+    },
+    {
+      "relationshipType": "PeersWith",
+      "sourceResourceId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/RG_SC_4_test/providers/Microsoft.Network/virtualNetworks/aznw-s4-hub-spoke-peering-hub-vnet",
+      "targetResourceId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/RG_SC_4_test/providers/Microsoft.Network/virtualNetworks/aznw-s4-hub-spoke-peering-spoke1-vnet",
+      "description": "hub-to-spoke1",
+      "metadata": {
+        "itemType": "Resources",
+        "source": "AzureResourceGraph",
+        "timestamp": "2026-09-25T10:12:06.9943814+00:00",
+        "permission": "Reader",
+        "status": "Available",
+        "completeness": 1,
+        "errors": []
+      }
+    },
+    {
+      "relationshipType": "PeersWith",
+      "sourceResourceId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/RG_SC_4_test/providers/Microsoft.Network/virtualNetworks/aznw-s4-hub-spoke-peering-hub-vnet",
+      "targetResourceId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/RG_SC_4_test/providers/Microsoft.Network/virtualNetworks/aznw-s4-hub-spoke-peering-spoke2-vnet",
+      "description": "hub-to-spoke2",
+      "metadata": {
+        "itemType": "Resources",
+        "source": "AzureResourceGraph",
+        "timestamp": "2026-09-25T10:12:06.9943814+00:00",
+        "permission": "Reader",
+        "status": "Available",
+        "completeness": 1,
+        "errors": []
+      }
+    },
+    {
+      "relationshipType": "Contains",
+      "sourceResourceId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/RG_SC_4_test/providers/Microsoft.Network/virtualNetworks/aznw-s4-hub-spoke-peering-spoke1-vnet",
+      "targetResourceId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/RG_SC_4_test/providers/Microsoft.Network/virtualNetworks/aznw-s4-hub-spoke-peering-spoke1-vnet/subnets/workload",
+      "description": "VNet contains subnet",
+      "metadata": {
+        "itemType": "Resources",
+        "source": "AzureResourceGraph",
+        "timestamp": "2026-09-25T10:12:06.9943814+00:00",
+        "permission": "Reader",
+        "status": "Available",
+        "completeness": 1,
+        "errors": []
+      }
+    },
+    {
+      "relationshipType": "SecuredBy",
+      "sourceResourceId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/RG_SC_4_test/providers/Microsoft.Network/virtualNetworks/aznw-s4-hub-spoke-peering-spoke1-vnet/subnets/workload",
+      "targetResourceId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/RG_SC_4_test/providers/Microsoft.Network/networkSecurityGroups/aznw-s4-hub-spoke-peering-nsg-spoke1",
+      "description": "Subnet associated with NSG",
+      "metadata": {
+        "itemType": "Resources",
+        "source": "AzureResourceGraph",
+        "timestamp": "2026-09-25T10:12:06.9943814+00:00",
+        "permission": "Reader",
+        "status": "Available",
+        "completeness": 1,
+        "errors": []
+      }
+    },
+    {
+      "relationshipType": "PeersWith",
+      "sourceResourceId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/RG_SC_4_test/providers/Microsoft.Network/virtualNetworks/aznw-s4-hub-spoke-peering-spoke1-vnet",
+      "targetResourceId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/RG_SC_4_test/providers/Microsoft.Network/virtualNetworks/aznw-s4-hub-spoke-peering-hub-vnet",
+      "description": "spoke1-to-hub",
+      "metadata": {
+        "itemType": "Resources",
+        "source": "AzureResourceGraph",
+        "timestamp": "2026-09-25T10:12:06.9943814+00:00",
+        "permission": "Reader",
+        "status": "Available",
+        "completeness": 1,
+        "errors": []
+      }
+    },
+    {
+      "relationshipType": "Contains",
+      "sourceResourceId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/RG_SC_4_test/providers/Microsoft.Network/virtualNetworks/aznw-s4-hub-spoke-peering-spoke2-vnet",
+      "targetResourceId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/RG_SC_4_test/providers/Microsoft.Network/virtualNetworks/aznw-s4-hub-spoke-peering-spoke2-vnet/subnets/workload",
+      "description": "VNet contains subnet",
+      "metadata": {
+        "itemType": "Resources",
+        "source": "AzureResourceGraph",
+        "timestamp": "2026-09-25T10:12:06.9943814+00:00",
+        "permission": "Reader",
+        "status": "Available",
+        "completeness": 1,
+        "errors": []
+      }
+    },
+    {
+      "relationshipType": "SecuredBy",
+      "sourceResourceId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/RG_SC_4_test/providers/Microsoft.Network/virtualNetworks/aznw-s4-hub-spoke-peering-spoke2-vnet/subnets/workload",
+      "targetResourceId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/RG_SC_4_test/providers/Microsoft.Network/networkSecurityGroups/aznw-s4-hub-spoke-peering-nsg-spoke2",
+      "description": "Subnet associated with NSG",
+      "metadata": {
+        "itemType": "Resources",
+        "source": "AzureResourceGraph",
+        "timestamp": "2026-09-25T10:12:06.9943814+00:00",
+        "permission": "Reader",
+        "status": "Available",
+        "completeness": 1,
+        "errors": []
+      }
+    },
+    {
+      "relationshipType": "PeersWith",
+      "sourceResourceId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/RG_SC_4_test/providers/Microsoft.Network/virtualNetworks/aznw-s4-hub-spoke-peering-spoke2-vnet",
+      "targetResourceId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/RG_SC_4_test/providers/Microsoft.Network/virtualNetworks/aznw-s4-hub-spoke-peering-hub-vnet",
+      "description": "spoke2-to-hub",
+      "metadata": {
+        "itemType": "Resources",
+        "source": "AzureResourceGraph",
+        "timestamp": "2026-09-25T10:12:06.9943814+00:00",
+        "permission": "Reader",
+        "status": "Available",
+        "completeness": 1,
+        "errors": []
+      }
+    },
+    {
+      "relationshipType": "AttachedTo",
+      "sourceResourceId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/RG_SC_4_test/providers/Microsoft.Network/networkSecurityGroups/aznw-s4-hub-spoke-peering-nsg-spoke1",
+      "targetResourceId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/RG_SC_4_TEST/providers/Microsoft.Network/virtualNetworks/AZNW-S4-HUB-SPOKE-PEERING-SPOKE1-VNET/subnets/WORKLOAD",
+      "description": "NSG attached to subnet",
+      "metadata": {
+        "itemType": "Resources",
+        "source": "AzureResourceGraph",
+        "timestamp": "2026-09-25T10:12:06.9943814+00:00",
+        "permission": "Reader",
+        "status": "Available",
+        "completeness": 1,
+        "errors": []
+      }
+    },
+    {
+      "relationshipType": "AttachedTo",
+      "sourceResourceId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/RG_SC_4_test/providers/Microsoft.Network/networkSecurityGroups/aznw-s4-hub-spoke-peering-nsg-spoke2",
+      "targetResourceId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/RG_SC_4_TEST/providers/Microsoft.Network/virtualNetworks/AZNW-S4-HUB-SPOKE-PEERING-SPOKE2-VNET/subnets/WORKLOAD",
+      "description": "NSG attached to subnet",
+      "metadata": {
+        "itemType": "Resources",
+        "source": "AzureResourceGraph",
+        "timestamp": "2026-09-25T10:12:06.9943814+00:00",
+        "permission": "Reader",
+        "status": "Available",
+        "completeness": 1,
+        "errors": []
+      }
+    }
+  ],
+  "collectionMetadata": [
+    {
+      "itemType": "Resources",
+      "source": "AzureResourceGraph",
+      "timestamp": "2026-09-25T10:12:06.9943814+00:00",
+      "permission": "Reader",
+      "status": "Available",
+      "completeness": 1,
+      "errors": []
+    },
+    {
+      "itemType": "AzureFirewalls",
+      "source": "AzureResourceGraph",
+      "timestamp": "2026-09-25T10:12:06.9943814+00:00",
+      "permission": "Reader",
+      "status": "Available",
+      "completeness": 1,
+      "errors": []
+    },
+    {
+      "itemType": "ExpressRoute",
+      "source": "AzureResourceGraph",
+      "timestamp": "2026-09-25T10:12:06.9943814+00:00",
+      "permission": "Reader",
+      "status": "Available",
+      "completeness": 1,
+      "errors": []
+    },
+    {
+      "itemType": "NICs",
+      "source": "AzureResourceGraph",
+      "timestamp": "2026-09-25T10:12:06.9943814+00:00",
+      "permission": "Reader",
+      "status": "Available",
+      "completeness": 1,
+      "errors": []
+    },
+    {
+      "itemType": "NSGs",
+      "source": "AzureResourceGraph",
+      "timestamp": "2026-09-25T10:12:06.9943814+00:00",
+      "permission": "Reader",
+      "status": "Available",
+      "completeness": 1,
+      "errors": []
+    },
+    {
+      "itemType": "PrivateDnsZones",
+      "source": "AzureResourceGraph",
+      "timestamp": "2026-09-25T10:12:06.9943814+00:00",
+      "permission": "Reader",
+      "status": "Available",
+      "completeness": 1,
+      "errors": []
+    },
+    {
+      "itemType": "PrivateEndpoints",
+      "source": "AzureResourceGraph",
+      "timestamp": "2026-09-25T10:12:06.9943814+00:00",
+      "permission": "Reader",
+      "status": "Available",
+      "completeness": 1,
+      "errors": []
+    },
+    {
+      "itemType": "PublicIPs",
+      "source": "AzureResourceGraph",
+      "timestamp": "2026-09-25T10:12:06.9943814+00:00",
+      "permission": "Reader",
+      "status": "Available",
+      "completeness": 1,
+      "errors": []
+    },
+    {
+      "itemType": "RouteTables",
+      "source": "AzureResourceGraph",
+      "timestamp": "2026-09-25T10:12:06.9943814+00:00",
+      "permission": "Reader",
+      "status": "Available",
+      "completeness": 1,
+      "errors": []
+    },
+    {
+      "itemType": "VNets",
+      "source": "AzureResourceGraph",
+      "timestamp": "2026-09-25T10:12:06.9943814+00:00",
+      "permission": "Reader",
+      "status": "Available",
+      "completeness": 1,
+      "errors": []
+    },
+    {
+      "itemType": "VirtualHubs",
+      "source": "AzureResourceGraph",
+      "timestamp": "2026-09-25T10:12:06.9943814+00:00",
+      "permission": "Reader",
+      "status": "Available",
+      "completeness": 1,
+      "errors": []
+    },
+    {
+      "itemType": "VirtualNetworkGateways",
+      "source": "AzureResourceGraph",
+      "timestamp": "2026-09-25T10:12:06.9943814+00:00",
+      "permission": "Reader",
+      "status": "Available",
+      "completeness": 1,
+      "errors": []
+    },
+    {
+      "itemType": "VirtualWans",
+      "source": "AzureResourceGraph",
+      "timestamp": "2026-09-25T10:12:06.9943814+00:00",
+      "permission": "Reader",
+      "status": "Available",
+      "completeness": 1,
+      "errors": []
+    },
+    {
+      "itemType": "Relationships",
+      "source": "Derived",
+      "timestamp": "2026-09-25T10:12:06.9943814+00:00",
+      "permission": "Reader",
+      "status": "Available",
+      "completeness": 1,
+      "errors": []
+    },
+    {
+      "itemType": "ScopeValidation",
+      "source": "Derived",
+      "timestamp": "2026-09-25T10:12:06.9943814+00:00",
+      "permission": "Reader",
+      "status": "Available",
+      "completeness": 1,
+      "errors": []
+    },
+    {
+      "itemType": "EffectiveRoutes",
+      "source": "ARM",
+      "timestamp": "2026-09-25T10:12:06.9943814+00:00",
+      "permission": "Microsoft.Network/networkInterfaces/effectiveRouteTable/action",
+      "status": "Unavailable",
+      "completeness": 0,
+      "errors": [
+        "Level 2 effective route collection is not implemented yet."
+      ]
+    },
+    {
+      "itemType": "EffectiveNSGs",
+      "source": "ARM",
+      "timestamp": "2026-09-25T10:12:06.9943814+00:00",
+      "permission": "Microsoft.Network/networkInterfaces/effectiveNetworkSecurityGroups/action",
+      "status": "Unavailable",
+      "completeness": 0,
+      "errors": [
+        "Level 2 effective NSG collection is not implemented yet."
+      ]
+    },
+    {
+      "itemType": "NextHop",
+      "source": "NetworkWatcher",
+      "timestamp": "2026-09-25T10:12:06.9943814+00:00",
+      "permission": "Microsoft.Network/networkWatchers/nextHop/action",
+      "status": "Unavailable",
+      "completeness": 0,
+      "errors": [
+        "Level 3 active diagnostics are not implemented yet."
+      ]
+    }
+  ]
+}

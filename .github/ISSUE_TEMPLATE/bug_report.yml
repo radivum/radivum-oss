@@ -1,0 +1,60 @@
+name: Bug report
+description: Something the tool does wrong, or an artifact it writes wrongly.
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for the report. Please do not paste a real snapshot, a tenant id or a subscription id — they
+        describe someone's network. A reproduction built from `samples/` is usually enough.
+  - type: input
+    id: version
+    attributes:
+      label: Version
+      description: The output of `dotnet tool list --global`
+    validations:
+      required: true
+  - type: input
+    id: sdk
+    attributes:
+      label: .NET SDK version
+      description: The output of `dotnet --version`
+    validations:
+      required: true
+  - type: dropdown
+    id: os
+    attributes:
+      label: Operating system
+      options: [Windows, Linux, macOS]
+    validations:
+      required: true
+  - type: textarea
+    id: command
+    attributes:
+      label: The command you ran
+      description: With identifiers replaced by placeholders of the same shape.
+      render: bash
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What you expected
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: What happened
+      description: The exit code, the message, and — if the problem is in an artifact — the relevant section of `analysis-manifest.json` or `network-report.md`, with names replaced.
+    validations:
+      required: true
+  - type: checkboxes
+    id: confirms
+    attributes:
+      label: Before submitting
+      options:
+        - label: I have removed real tenant, subscription and resource identifiers from this report.
+          required: true
+        - label: This is not a security vulnerability (those go through Security → Report a vulnerability).
+          required: true

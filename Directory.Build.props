@@ -1,0 +1,51 @@
+<Project>
+
+  <!--
+    The public counterpart of the private Directory.Build.props. It carries the same compiler contract and
+    differs only where the repository differs: the identity is the public repository, the licence expression
+    lives on each project that packs, and no private product metadata (an internal repository URL, an
+    internal company name) travels with it.
+  -->
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <LangVersion>14</LangVersion>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <AnalysisLevel>latest</AnalysisLevel>
+    <EnableNETAnalyzers>true</EnableNETAnalyzers>
+    <EnforceCodeStyleInBuild>true</EnforceCodeStyleInBuild>
+    <InvariantGlobalization>true</InvariantGlobalization>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <VersionPrefix>0.1.0</VersionPrefix>
+    <Authors>Radivum contributors</Authors>
+    <Company>Tiger Solutions</Company>
+    <Copyright>Copyright 2026 Tiger Solutions</Copyright>
+    <PackageProjectUrl>https://www.radivum.com</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/radivum/radivum-oss</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageIcon>icon.png</PackageIcon>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <Deterministic>true</Deterministic>
+    <ContinuousIntegrationBuild Condition="'$(CI)' == 'true'">true</ContinuousIntegrationBuild>
+  </PropertyGroup>
+
+  <!-- Deny by default: only a project that explicitly opts in is packable, and only it names a licence. -->
+  <PropertyGroup>
+    <IsPackable>false</IsPackable>
+    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+  </PropertyGroup>
+
+  <!--
+    The package page needs the icon and the readme inside the archive. The items are declared unconditionally
+    because this file is imported before a project decides whether it packs; a non-packing project simply never
+    produces an archive that carries them.
+  -->
+  <ItemGroup>
+    <None Include="$(MSBuildThisFileDirectory)icon.png" Pack="true" PackagePath="\" Visible="false" />
+    <None Include="$(MSBuildThisFileDirectory)README.md" Pack="true" PackagePath="\" Visible="false" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,74 @@
+name: ci
+
+# The second, independent proof that this tree stands alone: a clean machine with no private feed, no private
+# repository and no secret, on three operating systems.
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    name: build and test (${{ matrix.os }})
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest, macos-latest]
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-dotnet@v4
+        with:
+          global-json-file: global.json
+
+      - name: Restore
+        run: dotnet restore Radivum.Oss.sln
+
+      - name: Build
+        run: dotnet build Radivum.Oss.sln --no-restore --configuration Release
+
+      - name: Test
+        run: dotnet test Radivum.Oss.sln --no-build --configuration Release
+
+  smoke:
+    name: pack, install and run the sample
+    runs-on: ubuntu-latest
+    needs: build
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-dotnet@v4
+        with:
+          global-json-file: global.json
+
+      - name: Pack the tool and its libraries
+        run: |
+          set -eu
+          for project in src/Radivum.Model src/Radivum.Azure src/Radivum.Graph \
+                         src/Radivum.Oss.Analysis src/Radivum.Oss.Reporting \
+                         src/Radivum.Oss.Commands src/Radivum.Oss.Cli; do
+            dotnet pack "$project" --configuration Release --nologo --output ./packages
+          done
+
+      # Path A of the README, exactly as a reader would run it, against the package this commit produces.
+      - name: Install the tool from the packed output
+        run: dotnet tool install radivum-oss --tool-path ./tool --add-source ./packages --version "$(grep -oP '(?<=<VersionPrefix>)[^<]+' Directory.Build.props)"
+
+      - name: Run the sample
+        run: ./tool/radivum-oss report --snapshot samples/network-snapshot.sample.v1.json --out ./sample-output
+
+      - name: Assert the bundle
+        run: |
+          set -eu
+          for file in analysis-manifest.json findings.json network-graph.json network-report.md network-snapshot.json network-topology.md; do
+            test -f "./sample-output/$file" || { echo "missing $file"; exit 1; }
+          done
+          grep -q '"id": "topology"' ./sample-output/analysis-manifest.json
+          grep -A1 '"id": "topology"' ./sample-output/analysis-manifest.json | grep -q 'available'

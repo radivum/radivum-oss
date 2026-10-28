@@ -1,0 +1,39 @@
+name: Feature request
+description: A capability or an artifact change you would find useful.
+labels: [enhancement]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Please describe the problem before the solution. If the request is about the Pro edition or the Workbench,
+        this repository is not the right place — those are separate products.
+  - type: textarea
+    id: problem
+    attributes:
+      label: What are you trying to do
+      description: The task, and where the tool stops helping you today.
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: What you would like instead
+  - type: dropdown
+    id: area
+    attributes:
+      label: Where it applies
+      options:
+        - Collection and snapshot
+        - Graph, topology and diagram
+        - Findings and the report
+        - The analysis manifest
+        - The command line itself
+        - Documentation
+    validations:
+      required: true
+  - type: checkboxes
+    id: contract
+    attributes:
+      label: Contract impact
+      options:
+        - label: This would change a published artifact contract (a snapshot, graph or manifest member).

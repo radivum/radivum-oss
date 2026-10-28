@@ -1,0 +1,11 @@
+# Review ownership. The team handle must exist in the organisation before the repository is protected by this
+# file; until then GitHub reports it as unmatched, which is a warning rather than a failure.
+
+* @radivum/maintainers
+
+# Contracts are reviewed by the maintainer whatever else changes.
+/LICENSE            @radivum/maintainers
+/NOTICE             @radivum/maintainers
+/src/Radivum.Model  @radivum/maintainers
+/docs/artifacts.md  @radivum/maintainers
+/.github/workflows  @radivum/maintainers

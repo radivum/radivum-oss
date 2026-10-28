@@ -1,0 +1,11 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Question or idea
+    url: https://github.com/radivum/radivum-oss/discussions
+    about: Ask a question, share an artifact, or discuss a design before opening an issue.
+  - name: Security vulnerability
+    url: https://github.com/radivum/radivum-oss/security/advisories/new
+    about: Report privately. Never open a public issue for a vulnerability.
+  - name: Radivum Pro and the Workbench
+    url: https://www.radivum.com
+    about: Those are separate, proprietary products; this repository covers the open-source edition only.

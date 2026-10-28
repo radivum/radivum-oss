@@ -1,0 +1,12 @@
+Radivum OSS
+Copyright 2026 Tiger Solutions
+
+This product includes software developed at Tiger Solutions.
+
+The open-source edition of Radivum — the `radivum-oss` command-line tool, the `Radivum.*` libraries it carries
+and the tests and documents in this repository — is licensed under the Apache License, Version 2.0. See LICENSE.
+
+Radivum Pro and the Radivum Workbench are separate, proprietary products. They are not part of this repository
+and are not covered by its licence.
+
+Third-party components redistributed in the packages are listed in THIRD-PARTY-NOTICES.md.

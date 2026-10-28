@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <AssemblyName>Radivum.Model</AssemblyName>
+    <PackageId>Radivum.Model</PackageId>
+    <Description>Versioned NetworkSnapshot contract and evidence-aware analysis model for Radivum.</Description>
+    <PackageTags>azure;networking;architecture;model;snapshot</PackageTags>
+    <IsPackable>true</IsPackable>
+    <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
+  </PropertyGroup>
+
+</Project>

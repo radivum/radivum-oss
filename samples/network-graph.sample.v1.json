@@ -1,0 +1,269 @@
+{
+  "graphSchemaVersion": "1.0",
+  "sourceSnapshotSchemaVersion": "0.1",
+  "sourceSnapshotToolVersion": "0.1.0.0",
+  "generatedAt": "2026-09-10T00:00:00+00:00",
+  "scopeDescription": "/subscriptions/11111111-1111-1111-1111-111111111111/resourceGroups/rg-sample",
+  "nodes": [
+    {
+      "id": "/subscriptions/11111111-1111-1111-1111-111111111111/resourcegroups/rg-sample/providers/microsoft.network/networkinterfaces/nic-source",
+      "resourceId": "/subscriptions/11111111-1111-1111-1111-111111111111/resourceGroups/rg-sample/providers/Microsoft.Network/networkInterfaces/nic-source",
+      "nodeType": "NetworkInterface",
+      "displayName": "nic-source",
+      "azureResourceType": "Microsoft.Network/networkInterfaces",
+      "subscriptionId": "11111111-1111-1111-1111-111111111111",
+      "resourceGroup": "rg-sample",
+      "region": "eastus",
+      "parentNodeId": "synthetic:resourcegroup:11111111-1111-1111-1111-111111111111/rg-sample",
+      "metadata": null
+    },
+    {
+      "id": "/subscriptions/11111111-1111-1111-1111-111111111111/resourcegroups/rg-sample/providers/microsoft.network/networkinterfaces/nic-target",
+      "resourceId": "/subscriptions/11111111-1111-1111-1111-111111111111/resourceGroups/rg-sample/providers/Microsoft.Network/networkInterfaces/nic-target",
+      "nodeType": "NetworkInterface",
+      "displayName": "nic-target",
+      "azureResourceType": "Microsoft.Network/networkInterfaces",
+      "subscriptionId": "11111111-1111-1111-1111-111111111111",
+      "resourceGroup": "rg-sample",
+      "region": "eastus",
+      "parentNodeId": "synthetic:resourcegroup:11111111-1111-1111-1111-111111111111/rg-sample",
+      "metadata": null
+    },
+    {
+      "id": "/subscriptions/11111111-1111-1111-1111-111111111111/resourcegroups/rg-sample/providers/microsoft.network/networksecuritygroups/nsg-app",
+      "resourceId": "/subscriptions/11111111-1111-1111-1111-111111111111/resourceGroups/rg-sample/providers/Microsoft.Network/networkSecurityGroups/nsg-app",
+      "nodeType": "NetworkSecurityGroup",
+      "displayName": "nsg-app",
+      "azureResourceType": "Microsoft.Network/networkSecurityGroups",
+      "subscriptionId": "11111111-1111-1111-1111-111111111111",
+      "resourceGroup": "rg-sample",
+      "region": "eastus",
+      "parentNodeId": "synthetic:resourcegroup:11111111-1111-1111-1111-111111111111/rg-sample",
+      "metadata": null
+    },
+    {
+      "id": "/subscriptions/11111111-1111-1111-1111-111111111111/resourcegroups/rg-sample/providers/microsoft.network/virtualnetworks/vnet-core",
+      "resourceId": "/subscriptions/11111111-1111-1111-1111-111111111111/resourceGroups/rg-sample/providers/Microsoft.Network/virtualNetworks/vnet-core",
+      "nodeType": "VirtualNetwork",
+      "displayName": "vnet-core",
+      "azureResourceType": "Microsoft.Network/virtualNetworks",
+      "subscriptionId": "11111111-1111-1111-1111-111111111111",
+      "resourceGroup": "rg-sample",
+      "region": "eastus",
+      "parentNodeId": "synthetic:resourcegroup:11111111-1111-1111-1111-111111111111/rg-sample",
+      "metadata": null
+    },
+    {
+      "id": "/subscriptions/11111111-1111-1111-1111-111111111111/resourcegroups/rg-sample/providers/microsoft.network/virtualnetworks/vnet-core/subnets/app",
+      "resourceId": "/subscriptions/11111111-1111-1111-1111-111111111111/resourceGroups/rg-sample/providers/Microsoft.Network/virtualNetworks/vnet-core/subnets/app",
+      "nodeType": "Subnet",
+      "displayName": "app",
+      "azureResourceType": "Microsoft.Network/virtualNetworks/subnets",
+      "subscriptionId": "11111111-1111-1111-1111-111111111111",
+      "resourceGroup": "rg-sample",
+      "region": "eastus",
+      "parentNodeId": "/subscriptions/11111111-1111-1111-1111-111111111111/resourcegroups/rg-sample/providers/microsoft.network/virtualnetworks/vnet-core",
+      "metadata": null
+    },
+    {
+      "id": "/subscriptions/11111111-1111-1111-1111-111111111111/resourcegroups/rg-sample/providers/microsoft.network/virtualnetworks/vnet-core/subnets/target",
+      "resourceId": "/subscriptions/11111111-1111-1111-1111-111111111111/resourceGroups/rg-sample/providers/Microsoft.Network/virtualNetworks/vnet-core/subnets/target",
+      "nodeType": "Subnet",
+      "displayName": "target",
+      "azureResourceType": "Microsoft.Network/virtualNetworks/subnets",
+      "subscriptionId": "11111111-1111-1111-1111-111111111111",
+      "resourceGroup": "rg-sample",
+      "region": "eastus",
+      "parentNodeId": "/subscriptions/11111111-1111-1111-1111-111111111111/resourcegroups/rg-sample/providers/microsoft.network/virtualnetworks/vnet-core",
+      "metadata": null
+    },
+    {
+      "id": "synthetic:resourcegroup:11111111-1111-1111-1111-111111111111/rg-sample",
+      "resourceId": null,
+      "nodeType": "ResourceGroup",
+      "displayName": "rg-sample",
+      "azureResourceType": null,
+      "subscriptionId": "11111111-1111-1111-1111-111111111111",
+      "resourceGroup": "rg-sample",
+      "region": null,
+      "parentNodeId": "synthetic:subscription:11111111-1111-1111-1111-111111111111",
+      "metadata": null
+    },
+    {
+      "id": "synthetic:scope:/subscriptions/11111111-1111-1111-1111-111111111111/resourcegroups/rg-sample",
+      "resourceId": null,
+      "nodeType": "Scope",
+      "displayName": "/subscriptions/11111111-1111-1111-1111-111111111111/resourceGroups/rg-sample",
+      "azureResourceType": null,
+      "subscriptionId": null,
+      "resourceGroup": null,
+      "region": null,
+      "parentNodeId": null,
+      "metadata": null
+    },
+    {
+      "id": "synthetic:subscription:11111111-1111-1111-1111-111111111111",
+      "resourceId": null,
+      "nodeType": "Subscription",
+      "displayName": "11111111-1111-1111-1111-111111111111",
+      "azureResourceType": null,
+      "subscriptionId": "11111111-1111-1111-1111-111111111111",
+      "resourceGroup": null,
+      "region": null,
+      "parentNodeId": "synthetic:scope:/subscriptions/11111111-1111-1111-1111-111111111111/resourcegroups/rg-sample",
+      "metadata": null
+    }
+  ],
+  "edges": [
+    {
+      "id": "edge:connectedto:/subscriptions/11111111-1111-1111-1111-111111111111/resourcegroups/rg-sample/providers/microsoft.network/networkinterfaces/nic-source->/subscriptions/11111111-1111-1111-1111-111111111111/resourcegroups/rg-sample/providers/microsoft.network/virtualnetworks/vnet-core/subnets/app",
+      "sourceNodeId": "/subscriptions/11111111-1111-1111-1111-111111111111/resourcegroups/rg-sample/providers/microsoft.network/networkinterfaces/nic-source",
+      "targetNodeId": "/subscriptions/11111111-1111-1111-1111-111111111111/resourcegroups/rg-sample/providers/microsoft.network/virtualnetworks/vnet-core/subnets/app",
+      "relationshipType": "ConnectedTo",
+      "displayName": "NIC connected to subnet",
+      "azureResourceId": null,
+      "metadata": null
+    },
+    {
+      "id": "edge:connectedto:/subscriptions/11111111-1111-1111-1111-111111111111/resourcegroups/rg-sample/providers/microsoft.network/networkinterfaces/nic-target->/subscriptions/11111111-1111-1111-1111-111111111111/resourcegroups/rg-sample/providers/microsoft.network/virtualnetworks/vnet-core/subnets/target",
+      "sourceNodeId": "/subscriptions/11111111-1111-1111-1111-111111111111/resourcegroups/rg-sample/providers/microsoft.network/networkinterfaces/nic-target",
+      "targetNodeId": "/subscriptions/11111111-1111-1111-1111-111111111111/resourcegroups/rg-sample/providers/microsoft.network/virtualnetworks/vnet-core/subnets/target",
+      "relationshipType": "ConnectedTo",
+      "displayName": "NIC connected to subnet",
+      "azureResourceId": null,
+      "metadata": null
+    },
+    {
+      "id": "edge:contains:/subscriptions/11111111-1111-1111-1111-111111111111/resourcegroups/rg-sample/providers/microsoft.network/virtualnetworks/vnet-core->/subscriptions/11111111-1111-1111-1111-111111111111/resourcegroups/rg-sample/providers/microsoft.network/virtualnetworks/vnet-core/subnets/app",
+      "sourceNodeId": "/subscriptions/11111111-1111-1111-1111-111111111111/resourcegroups/rg-sample/providers/microsoft.network/virtualnetworks/vnet-core",
+      "targetNodeId": "/subscriptions/11111111-1111-1111-1111-111111111111/resourcegroups/rg-sample/providers/microsoft.network/virtualnetworks/vnet-core/subnets/app",
+      "relationshipType": "Contains",
+      "displayName": "VNet contains subnet",
+      "azureResourceId": null,
+      "metadata": null
+    },
+    {
+      "id": "edge:contains:/subscriptions/11111111-1111-1111-1111-111111111111/resourcegroups/rg-sample/providers/microsoft.network/virtualnetworks/vnet-core->/subscriptions/11111111-1111-1111-1111-111111111111/resourcegroups/rg-sample/providers/microsoft.network/virtualnetworks/vnet-core/subnets/target",
+      "sourceNodeId": "/subscriptions/11111111-1111-1111-1111-111111111111/resourcegroups/rg-sample/providers/microsoft.network/virtualnetworks/vnet-core",
+      "targetNodeId": "/subscriptions/11111111-1111-1111-1111-111111111111/resourcegroups/rg-sample/providers/microsoft.network/virtualnetworks/vnet-core/subnets/target",
+      "relationshipType": "Contains",
+      "displayName": "VNet contains subnet",
+      "azureResourceId": null,
+      "metadata": null
+    },
+    {
+      "id": "edge:contains:synthetic:resourcegroup:11111111-1111-1111-1111-111111111111/rg-sample->/subscriptions/11111111-1111-1111-1111-111111111111/resourcegroups/rg-sample/providers/microsoft.network/networkinterfaces/nic-source",
+      "sourceNodeId": "synthetic:resourcegroup:11111111-1111-1111-1111-111111111111/rg-sample",
+      "targetNodeId": "/subscriptions/11111111-1111-1111-1111-111111111111/resourcegroups/rg-sample/providers/microsoft.network/networkinterfaces/nic-source",
+      "relationshipType": "Contains",
+      "displayName": "Resource group contains resource",
+      "azureResourceId": null,
+      "metadata": null
+    },
+    {
+      "id": "edge:contains:synthetic:resourcegroup:11111111-1111-1111-1111-111111111111/rg-sample->/subscriptions/11111111-1111-1111-1111-111111111111/resourcegroups/rg-sample/providers/microsoft.network/networkinterfaces/nic-target",
+      "sourceNodeId": "synthetic:resourcegroup:11111111-1111-1111-1111-111111111111/rg-sample",
+      "targetNodeId": "/subscriptions/11111111-1111-1111-1111-111111111111/resourcegroups/rg-sample/providers/microsoft.network/networkinterfaces/nic-target",
+      "relationshipType": "Contains",
+      "displayName": "Resource group contains resource",
+      "azureResourceId": null,
+      "metadata": null
+    },
+    {
+      "id": "edge:contains:synthetic:resourcegroup:11111111-1111-1111-1111-111111111111/rg-sample->/subscriptions/11111111-1111-1111-1111-111111111111/resourcegroups/rg-sample/providers/microsoft.network/networksecuritygroups/nsg-app",
+      "sourceNodeId": "synthetic:resourcegroup:11111111-1111-1111-1111-111111111111/rg-sample",
+      "targetNodeId": "/subscriptions/11111111-1111-1111-1111-111111111111/resourcegroups/rg-sample/providers/microsoft.network/networksecuritygroups/nsg-app",
+      "relationshipType": "Contains",
+      "displayName": "Resource group contains resource",
+      "azureResourceId": null,
+      "metadata": null
+    },
+    {
+      "id": "edge:contains:synthetic:resourcegroup:11111111-1111-1111-1111-111111111111/rg-sample->/subscriptions/11111111-1111-1111-1111-111111111111/resourcegroups/rg-sample/providers/microsoft.network/virtualnetworks/vnet-core",
+      "sourceNodeId": "synthetic:resourcegroup:11111111-1111-1111-1111-111111111111/rg-sample",
+      "targetNodeId": "/subscriptions/11111111-1111-1111-1111-111111111111/resourcegroups/rg-sample/providers/microsoft.network/virtualnetworks/vnet-core",
+      "relationshipType": "Contains",
+      "displayName": "Resource group contains resource",
+      "azureResourceId": null,
+      "metadata": null
+    },
+    {
+      "id": "edge:contains:synthetic:scope:/subscriptions/11111111-1111-1111-1111-111111111111/resourcegroups/rg-sample->synthetic:subscription:11111111-1111-1111-1111-111111111111",
+      "sourceNodeId": "synthetic:scope:/subscriptions/11111111-1111-1111-1111-111111111111/resourcegroups/rg-sample",
+      "targetNodeId": "synthetic:subscription:11111111-1111-1111-1111-111111111111",
+      "relationshipType": "Contains",
+      "displayName": "Scope contains subscription",
+      "azureResourceId": null,
+      "metadata": null
+    },
+    {
+      "id": "edge:contains:synthetic:subscription:11111111-1111-1111-1111-111111111111->synthetic:resourcegroup:11111111-1111-1111-1111-111111111111/rg-sample",
+      "sourceNodeId": "synthetic:subscription:11111111-1111-1111-1111-111111111111",
+      "targetNodeId": "synthetic:resourcegroup:11111111-1111-1111-1111-111111111111/rg-sample",
+      "relationshipType": "Contains",
+      "displayName": "Subscription contains resource group",
+      "azureResourceId": null,
+      "metadata": null
+    },
+    {
+      "id": "edge:protectedby:/subscriptions/11111111-1111-1111-1111-111111111111/resourcegroups/rg-sample/providers/microsoft.network/virtualnetworks/vnet-core/subnets/target->/subscriptions/11111111-1111-1111-1111-111111111111/resourcegroups/rg-sample/providers/microsoft.network/networksecuritygroups/nsg-app",
+      "sourceNodeId": "/subscriptions/11111111-1111-1111-1111-111111111111/resourcegroups/rg-sample/providers/microsoft.network/virtualnetworks/vnet-core/subnets/target",
+      "targetNodeId": "/subscriptions/11111111-1111-1111-1111-111111111111/resourcegroups/rg-sample/providers/microsoft.network/networksecuritygroups/nsg-app",
+      "relationshipType": "ProtectedBy",
+      "displayName": "Subnet protected by NSG",
+      "azureResourceId": "/subscriptions/11111111-1111-1111-1111-111111111111/resourceGroups/rg-sample/providers/Microsoft.Network/networkSecurityGroups/nsg-app",
+      "metadata": null
+    }
+  ],
+  "groups": [
+    {
+      "id": "/subscriptions/11111111-1111-1111-1111-111111111111/resourcegroups/rg-sample/providers/microsoft.network/virtualnetworks/vnet-core",
+      "groupType": "VirtualNetwork",
+      "displayName": "vnet-core",
+      "parentGroupId": "synthetic:resourcegroup:11111111-1111-1111-1111-111111111111/rg-sample",
+      "nodeIds": [
+        "/subscriptions/11111111-1111-1111-1111-111111111111/resourcegroups/rg-sample/providers/microsoft.network/virtualnetworks/vnet-core/subnets/app",
+        "/subscriptions/11111111-1111-1111-1111-111111111111/resourcegroups/rg-sample/providers/microsoft.network/virtualnetworks/vnet-core/subnets/target"
+      ],
+      "metadata": null
+    },
+    {
+      "id": "synthetic:resourcegroup:11111111-1111-1111-1111-111111111111/rg-sample",
+      "groupType": "ResourceGroup",
+      "displayName": "rg-sample",
+      "parentGroupId": "synthetic:subscription:11111111-1111-1111-1111-111111111111",
+      "nodeIds": [
+        "/subscriptions/11111111-1111-1111-1111-111111111111/resourcegroups/rg-sample/providers/microsoft.network/networkinterfaces/nic-source",
+        "/subscriptions/11111111-1111-1111-1111-111111111111/resourcegroups/rg-sample/providers/microsoft.network/networkinterfaces/nic-target",
+        "/subscriptions/11111111-1111-1111-1111-111111111111/resourcegroups/rg-sample/providers/microsoft.network/networksecuritygroups/nsg-app",
+        "/subscriptions/11111111-1111-1111-1111-111111111111/resourcegroups/rg-sample/providers/microsoft.network/virtualnetworks/vnet-core"
+      ],
+      "metadata": null
+    },
+    {
+      "id": "synthetic:scope:/subscriptions/11111111-1111-1111-1111-111111111111/resourcegroups/rg-sample",
+      "groupType": "Scope",
+      "displayName": "/subscriptions/11111111-1111-1111-1111-111111111111/resourceGroups/rg-sample",
+      "parentGroupId": null,
+      "nodeIds": [
+        "synthetic:subscription:11111111-1111-1111-1111-111111111111"
+      ],
+      "metadata": null
+    },
+    {
+      "id": "synthetic:subscription:11111111-1111-1111-1111-111111111111",
+      "groupType": "Subscription",
+      "displayName": "11111111-1111-1111-1111-111111111111",
+      "parentGroupId": "synthetic:scope:/subscriptions/11111111-1111-1111-1111-111111111111/resourcegroups/rg-sample",
+      "nodeIds": [
+        "synthetic:resourcegroup:11111111-1111-1111-1111-111111111111/rg-sample"
+      ],
+      "metadata": null
+    }
+  ],
+  "metadata": {
+    "sourceTenantId": "22222222-2222-2222-2222-222222222222",
+    "sourceSubscriptions": "11111111-1111-1111-1111-111111111111",
+    "sample": "sanitized"
+  }
+}
