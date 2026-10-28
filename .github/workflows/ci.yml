@@ -57,9 +57,15 @@ jobs:
             dotnet pack "$project" --configuration Release --nologo --output ./packages
           done
 
-      # Path A of the README, exactly as a reader would run it, against the package this commit produces.
+      # Path A of the README, exactly as a reader would run it, against the package this commit produces. The
+      # repository's NuGet.config clears inherited sources and maps every package to nuget.org, and `--add-source`
+      # cannot be combined with source mapping, so the install runs against a config whose only source is ./packages.
       - name: Install the tool from the packed output
-        run: dotnet tool install radivum-oss --tool-path ./tool --add-source ./packages --version "$(grep -oP '(?<=<VersionPrefix>)[^<]+' Directory.Build.props)"
+        run: |
+          set -eu
+          version="$(grep -oP '(?<=<VersionPrefix>)[^<]+' Directory.Build.props)"
+          printf '<?xml version="1.0" encoding="utf-8"?>\n<configuration>\n  <packageSources>\n    <clear />\n    <add key="local" value="%s/packages" />\n  </packageSources>\n</configuration>\n' "$(pwd)" > ./.smoke-nuget.config
+          dotnet tool install radivum-oss --tool-path ./tool --configfile ./.smoke-nuget.config --version "$version"
 
       - name: Run the sample
         run: ./tool/radivum-oss report --snapshot samples/network-snapshot.sample.v1.json --out ./sample-output
