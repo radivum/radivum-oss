@@ -8,6 +8,10 @@
 **Collect and document an Azure network from your own sign-in.** One command reads the network you can
 already see, writes a versioned snapshot, a Markdown report and a Mermaid topology, and uploads nothing.
 
+Try the [interactive demo](https://www.radivum.com/demo) - a sample estate, no sign-in - or read the
+[product site](https://www.radivum.com). The [Radivum Workbench](https://app.radivum.com) renders these artifacts
+and requires a sign-in.
+
 ## What you get
 
 - **A network inventory** from Azure Resource Graph and ARM, using your own identity: virtual networks and
@@ -137,7 +141,7 @@ is to name the target from its resource id without an extra read. Exit codes are
 
 ## Radivum OSS, Radivum Pro and the Workbench
 
-| | Radivum OSS (this repository) | Radivum Pro | Radivum Workbench |
+| | Radivum OSS (this repository) | Radivum Pro | [Radivum Workbench](https://app.radivum.com) (sign-in required) |
 |---|---|---|---|
 | Collection and snapshot | yes | same collector, by design | uses what a host collects |
 | Graph, Mermaid topology, Markdown report | yes | yes | renders them |
@@ -147,7 +151,8 @@ is to name the target from its resource id without an extra read. Exit codes are
 
 Pro adds interpretation of the same evidence — it never gates access to your own data, and it uses the same
 collector, so a Pro run cannot see more than an OSS run. The comparison is in
-[docs/edition-comparison.md](docs/edition-comparison.md), and the product site is
+[docs/edition-comparison.md](docs/edition-comparison.md) and in the site's
+[capability and edition comparison](https://www.radivum.com/features#editions-heading); the product site is
 [www.radivum.com](https://www.radivum.com).
 
 ## Documentation, contributing, support
